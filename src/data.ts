@@ -15,6 +15,13 @@ export type company = {
   imageSrc: string;
 };
 
+export type awards = {
+  title: string;
+  year: number;
+  description: string;
+  imageSrc?: string;
+};
+
 const companies: company[] = [
   {
     title: "Twitter",
@@ -81,4 +88,53 @@ const companies: company[] = [
   },
 ];
 
-export { companies };
+const awards: awards[] = [
+  {
+    title: "Heinlein Prize for Advances in Space Commercialization",
+    year: 2011,
+    description:
+      "Awarded for significant contributions to the commercialization of space.",
+  },
+  {
+    title: "Royal Aeronautical Society's Gold Medal",
+    year: 2012,
+    description: "Received for advancing space technology with SpaceX.",
+  },
+  {
+    title: "FAA's Commercial Space Transportation Wings Award",
+    year: 2012,
+    description:
+      "Honored for efforts in advancing commercial space transportation.",
+  },
+  {
+    title: "Robert J. Collier Trophy",
+    year: 2015,
+    description:
+      "Recognized for the successful landing and reuse of the Falcon 9 rocket by SpaceX.",
+  },
+  {
+    title: "World Technology Award",
+    year: 2015,
+    description:
+      "Acknowledged as a leader in space exploration and technology.",
+  },
+  {
+    title: "RSA Benjamin Franklin Medal",
+    year: 2018,
+    description: "Received for contributions to the field of innovation.",
+  },
+  {
+    title: "ISS Research and Development Award",
+    year: 2019,
+    description:
+      "Awarded to SpaceX for contributions to the International Space Station and space research.",
+  },
+  {
+    title: "Axel Springer Award",
+    year: 2020,
+    description:
+      "Honored for pioneering work in electric vehicles and space exploration.",
+  },
+];
+
+export { companies, awards };
