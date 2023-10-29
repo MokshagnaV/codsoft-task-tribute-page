@@ -9,24 +9,37 @@ function Companies() {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["5%", "-85%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["45%", "-55%"]);
 
   return (
-    <section ref={targetRef} className="max-w-7xl m-auto relative h-[300vh]">
-      {/* <h1 className="py-20 sticky top-0 text-center text-4xl font-gloock">
-        Business Career
-      </h1> */}
-      <div className="py-20 sticky top-0 text-center">
-        <SubHeading title="Business Career" />
-      </div>
-      <div className="sticky top-44 flex items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-4">
+    <>
+      <section className="md:hidden">
+        <div className="mb-8 text-center">
+          <SubHeading title="Business Career" />
+        </div>
+        <div className="flex gap-5 flex-wrap justify-center items-stretch">
           {companies.map((company, index) => (
-            <Card key={index} data={company} />
+            <Card key={index} data={company} small />
           ))}
-        </motion.div>
-      </div>
-    </section>
+        </div>
+      </section>
+
+      <section
+        ref={targetRef}
+        className="max-md:hidden max-w-7xl m-auto relative h-[300vh]"
+      >
+        <div className="sticky top-20 flex flex-col items-center overflow-hidden">
+          <div className="sticky top-0 mb-8 text-center">
+            <SubHeading title="Business Career" />
+          </div>
+          <motion.div style={{ x }} className="flex gap-4">
+            {companies.map((company, index) => (
+              <Card key={index} data={company} />
+            ))}
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 }
 

@@ -15,7 +15,7 @@ export type company = {
   imageSrc: string;
 };
 
-export type awards = {
+export type award = {
   title: string;
   year: number;
   description: string;
@@ -88,7 +88,7 @@ const companies: company[] = [
   },
 ];
 
-const awards: awards[] = [
+const awards: award[] = [
   {
     title: "Heinlein Prize for Advances in Space Commercialization",
     year: 2011,
